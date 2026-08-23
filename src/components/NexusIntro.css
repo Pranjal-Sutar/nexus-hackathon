@@ -1,0 +1,746 @@
+/* =========================================================
+   NEXUS INTRO / ENTRY EXPERIENCE
+========================================================= */
+
+.nexus-intro {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(105, 70, 190, 0.18),
+      transparent 35%
+    ),
+    #07080d;
+
+  color: #f4f4f6;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.intro-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 56px 56px;
+
+  mask-image:
+    radial-gradient(
+      circle at center,
+      black,
+      transparent 75%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   NOISE
+========================================================= */
+
+.intro-noise {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.04;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   VIGNETTE
+========================================================= */
+
+.intro-vignette {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 25%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SCAN LINE
+========================================================= */
+
+.intro-scan {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(170, 120, 255, 0.7),
+      transparent
+    );
+
+  box-shadow:
+    0 0 18px
+    rgba(150, 100, 255, 0.5);
+
+  opacity: 0.45;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.intro-content {
+  position: relative;
+
+  width: min(900px, 90vw);
+  height: 700px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   DJSCSI
+========================================================= */
+.intro-djcsi {
+  position: absolute;
+  top: 42px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: clamp(24px, 3vw, 40px);
+
+  font-weight: 700;
+  line-height: 1;
+
+  color: #f5f5f7;
+
+  letter-spacing: 0.12em;
+
+  text-align: center;
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 25px
+    rgba(155, 105, 255, 0.15);
+}
+
+/* =========================================================
+   PRESENTS
+========================================================= */
+
+.intro-presents {
+  position: absolute;
+
+  top: 102px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.38em;
+
+  color: #858691;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ORBITAL CORE
+========================================================= */
+
+.intro-core {
+  position: absolute;
+
+  top: 145px;
+
+  left: 50%;
+
+  width: 270px;
+  height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: -135px;
+}
+
+
+/* =========================================================
+   ENERGY PULSE
+========================================================= */
+
+.intro-energy {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(170, 120, 255, 0.45),
+      transparent 70%
+    );
+
+  filter: blur(8px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.intro-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(150, 110, 255, 0.28);
+
+  transform-origin: center;
+
+  pointer-events: none;
+}
+
+
+.orbit-outer {
+  width: 270px;
+  height: 270px;
+
+  border-style: dashed;
+
+  box-shadow:
+    0 0 30px
+    rgba(140, 90, 255, 0.08);
+}
+
+
+.orbit-middle {
+  width: 195px;
+  height: 195px;
+
+  border-color:
+    rgba(65, 205, 255, 0.28);
+
+  box-shadow:
+    inset 0 0 25px
+    rgba(65, 205, 255, 0.04);
+}
+
+
+.orbit-inner {
+  width: 125px;
+  height: 125px;
+
+  border-color:
+    rgba(190, 170, 255, 0.38);
+}
+
+
+/* =========================================================
+   CORE N
+========================================================= */
+
+.intro-core-letter {
+  position: relative;
+
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(105, 75, 180, 0.22),
+      rgba(10, 10, 20, 0.96)
+    );
+
+  border:
+    1px solid
+    rgba(180, 150, 255, 0.4);
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  z-index: 3;
+
+  box-shadow:
+    0 0 45px
+    rgba(110, 70, 220, 0.28);
+
+  animation:
+    coreGlow 2.2s ease-in-out infinite;
+}
+
+
+@keyframes coreGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 25px
+      rgba(110, 70, 220, 0.18);
+  }
+
+  50% {
+    box-shadow:
+      0 0 55px
+      rgba(140, 90, 255, 0.4);
+  }
+}
+
+
+/* =========================================================
+   INFINITY
+========================================================= */
+
+.intro-infinity {
+  position: absolute;
+
+  right: -4px;
+
+  top: 50%;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(156, 110, 255, 0.4);
+
+  color: #8e75ff;
+
+  font-size: 23px;
+
+  z-index: 4;
+
+  background:
+    rgba(10, 8, 20, 0.82);
+
+  box-shadow:
+    0 0 25px
+    rgba(150, 100, 255, 0.2);
+}
+
+/* =========================================================
+   NEXUS TITLE
+========================================================= */
+
+.intro-title {
+  position: absolute;
+
+  top: 320px;
+  left: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  z-index: 8;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   NEXUS LETTER-BY-LETTER
+========================================================= */
+
+.intro-title-line {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 90px;
+
+  font-size:
+    clamp(64px, 7vw, 100px);
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  letter-spacing: 0.08em;
+
+  white-space: nowrap;
+}
+
+
+/*
+   IMPORTANT:
+   Each letter is its own animated element.
+   Nothing is visible before Framer Motion
+   starts its reveal.
+*/
+
+.intro-title-line .nexus-letter {
+  display: inline-block;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  /* Gradient inside the letter */
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 20%,
+      #a673ff7a 48%,
+      #486dff 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  /*
+     Dark outline around EACH individual letter
+  */
+  -webkit-text-stroke:
+    1px rgba(15, 10, 25, 0.9);
+
+  /*
+     Neon glow
+  */
+  text-shadow:
+    0 0 6px rgba(162, 115, 255, 0.9),
+    0 0 16px rgba(162, 115, 255, 0.65),
+    0 0 30px rgba(72, 207, 255, 0.35);
+
+  will-change:
+    transform,
+    opacity,
+    filter;
+}
+/* =========================================================
+   ENTER BUTTON
+========================================================= */
+
+.intro-bottom {
+  position: absolute;
+
+  top: 535px;
+
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+
+  pointer-events: auto;
+}
+
+
+.intro-enter {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  min-width: 190px;
+
+  padding: 15px 21px;
+
+  border:
+    1px solid
+    rgba(162, 115, 255, 0.65);
+
+  background:
+    rgba(10, 8, 20, 0.65);
+
+  color: #d8c7ff;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 25;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 0 12px rgba(162, 115, 255, 0.18),
+    inset 0 0 12px rgba(162, 115, 255, 0.06);
+
+  backdrop-filter: blur(6px);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* =========================================================
+   CORNER TEXT
+========================================================= */
+
+.intro-corner {
+  position: absolute;
+
+  bottom: 38px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  color: #575864;
+
+  z-index: 5;
+}
+
+
+.intro-corner-left {
+  left: 30px;
+}
+
+
+.intro-corner-right {
+  right: 30px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .intro-content {
+    width: 100%;
+    height: 600px;
+  }
+
+
+  /* DJSCSI */
+
+  .intro-djcsi {
+    top: 35px;
+
+    font-size:
+      clamp(28px, 9vw, 44px);
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .intro-presents {
+    top: 88px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.3em;
+  }
+
+
+  /* ORBITAL SYSTEM */
+
+  .intro-core {
+    top: 120px;
+
+    width: 220px;
+    height: 220px;
+
+    margin-left: -110px;
+  }
+
+
+  .orbit-outer {
+    width: 220px;
+    height: 220px;
+  }
+
+
+  .orbit-middle {
+    width: 160px;
+    height: 160px;
+  }
+
+
+  .orbit-inner {
+    width: 105px;
+    height: 105px;
+  }
+
+
+  .intro-core-letter {
+    width: 62px;
+    height: 62px;
+
+    font-size: 30px;
+  }
+
+
+  .intro-infinity {
+    right: -3px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+
+  /* NEXUS */
+
+  .intro-title {
+    top: 315px;
+  }
+
+
+  .intro-title-line {
+    min-height: 70px;
+
+    font-size:
+      clamp(50px, 15vw, 72px);
+
+    letter-spacing:
+      -0.07em;
+  }
+
+
+  .intro-subtitle {
+    margin-top: 10px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.16em;
+  }
+
+
+  /* BUTTON */
+
+  .intro-bottom {
+    top: auto;
+
+    bottom: 28px;
+  }
+
+
+  .intro-enter {
+    min-width: 175px;
+
+    padding: 13px 17px;
+
+    font-size: 9px;
+  }
+
+
+  /* CORNERS */
+
+  .intro-corner {
+    display: none;
+  }
+
+
+  .intro-scan {
+    opacity: 0.3;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .intro-scan {
+    display: none;
+  }
+
+  .intro-core-letter {
+    animation: none;
+  }
+}
