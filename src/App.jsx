@@ -7,16 +7,16 @@ import CustomCursor from "./components/Customcursor";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CountdownSection from "./components/Countdownsection";
-import JourneyDivider from "./components/JourneyDivider";
+import JourneyDivider from "./components/Journeydivider";
 import AboutSection from "./components/Aboutsection";
-import TimelineSection from "./components/TimelineSection";
-import RulesSection from "./components/RulesSection";
-import SponsorsSection from "./components/SponsorsSection";
-import JudgesSection from "./components/JudgesSection";
-import ChallengesSection from "./components/ChallengesSection";
-import PrizesSection from "./components/PrizesSection";
-import FaqSection from "./components/FaqSection";
-import FinalCta from "./components/FinalCta";
+import TimelineSection from "./components/Timelinesection";
+import RulesSection from "./components/Rulessection";
+import SponsorsSection from "./components/Sponsorssection";
+import JudgesSection from "./components/Judgessection";
+import ChallengesSection from "./components/Challengessection";
+import PrizesSection from "./components/Prizessection";
+import FaqSection from "./components/Faqsection";
+import FinalCta from "./components/Finalcta";
 
 const INTRO_SESSION_KEY = "nexus-intro-seen";
 
